@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "*"
+polars = "*"
+tqdm = "*"
+kaggle = "*"
+beartype = "*"
+jupyter = "*"
+matplotlib = "*"
+numpy = "*"
+
+[dev-packages]
+exceptiongroup = "*"
+pytest = "*"
+yapf = "*"
+
+[requires]
+python_version = "3"
