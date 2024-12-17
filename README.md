@@ -21,6 +21,15 @@ Train/Test split is done in the same way as in the OTTO dataset by splitting the
 
 Run the following command to generate the training and testing datasets:
 ```
-pipenv run python -m data.train_test_split --input-path 'data/events.csv' --output-path 'data/generated' --train-weeks 3 --test-weeks 2
+pipenv run python -m src.data_generation.train_test_split --input-path 'data/events.csv' --output-path 'data/generated' --train-weeks 3 --test-weeks 2
 ```
 
+Run the following command to split test set:
+```
+pipenv run python -m src.data_generation.testset_labels --test-set 'data/generated/test_set.csv' --output-path 'data/generated'
+```
+
+Run the following command to generate product category information for training:
+```
+pipenv run python -m src.data_generation.product_category_tree --train-set-path 'data/generated' --input-path 'data' --output-path 'data/generated' --train-weeks 3 --test-weeks 2
+```

@@ -53,8 +53,6 @@ def main(train_set_path: Path, input_path: Path, output_path: Path, train_weeks:
         .sort(["itemid", "categoryid", "parentid"])
     )
 
-    print(item_categories_df)
-
     print("Saving the datasets")
     train_set_file = output_path / "item_categories.csv"
     item_categories_df.write_csv(train_set_file)
